@@ -29,12 +29,13 @@ ul, menu {
 
 body {
   background-color: #f8f8f8;
+  font-family: "PlayFairDisplay";
 }
 
 .container {
   width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 10px;
 }
 
 .button {
@@ -43,6 +44,7 @@ body {
   font-weight: bold;
   background-color: #f9c06a;
   display: block;
+  height: 48px;
   text-decoration: none;
   color: #1e1e1e;
   padding: 14px 26px;
@@ -152,6 +154,74 @@ menu a:hover {
   gap: 30px;
 }
 
+.enjoy__cards,
+.why-are__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.why-are__cards {
+  margin-bottom: 20px;
+}
+.why-are__cards .card {
+  padding: 35px;
+  transition: background-color 0.3s;
+}
+.why-are__cards .card__title {
+  font-size: 28px;
+}
+.why-are__cards .card__text {
+  font-size: 20px;
+}
+.why-are__cards .card:hover {
+  outline: none;
+  background-color: #FFEED8;
+}
+
+.enjoy__cards .card {
+  margin-bottom: 30px;
+}
+
+.card {
+  background-color: #FFF9F1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  outline: 1px solid rgba(249, 192, 106, 0.42);
+  outline-offset: -1px;
+  color: #603809;
+  transition: outline-color 0.3s;
+}
+.card:hover {
+  outline-color: #f9c06a;
+}
+.card__image {
+  margin-bottom: 10px;
+  position: relative;
+}
+.card__title {
+  font-size: 22px;
+  font-weight: bold;
+}
+.card__text {
+  font-size: 16px;
+  color: #1e1e1e;
+  text-align: center;
+  text-wrap: pretty;
+}
+.card__price {
+  font-size: 18px;
+  font-weight: bold;
+}
+.card .button {
+  margin-bottom: -24px;
+  line-height: 1.2;
+  position: relative;
+}
+
 .discover {
   min-height: 100vh;
   position: relative;
@@ -164,7 +234,6 @@ menu a:hover {
   margin: 0;
 }
 .discover__block {
-  flex-basis: 50%;
   gap: 30px;
   display: flex;
   flex-direction: column;
@@ -176,7 +245,6 @@ menu a:hover {
   line-height: 1.7;
 }
 .discover__image {
-  flex-basis: 50%;
   width: 45%;
   height: auto;
 }
@@ -211,6 +279,58 @@ menu a:hover {
   color: #707070;
   font-weight: 400;
   text-align: center;
+  margin-bottom: 16px;
+}
+
+.container--enjoy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+
+.why-are {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.why-are__title {
+  font-size: 54px;
+  font-weight: bold;
+  color: #603809;
+  margin: 0;
+  text-align: center;
+}
+.why-are__subtitle {
+  font-size: 20px;
+  color: #707070;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.why-are__text {
+  font-size: 20px;
+  color: #707070;
+  text-align: center;
+}
+.why-are__text .enfasis {
+  display: block;
+  margin-top: 5px;
+  color: #603809;
+  font-size: 30px;
+  font-weight: bold;
+}
+.why-are .button {
+  align-self: center;
+}
+
+.container--why-are {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
 }
 
 /*# sourceMappingURL=main.css.map */
