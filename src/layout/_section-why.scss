@@ -1,5 +1,4 @@
-
-.enjoy{
+.why-are{
   min-height: 100vh;
   @include flex(column, center, center, nowrap);
   &__title{
@@ -16,9 +15,24 @@
     text-align: center;
     margin-bottom: 16px
   }
+  &__text{
+    font-size: 20px;
+    color: $font-color;
+    text-align: center;
+    .enfasis{
+      display: block;
+      margin-top: 5px;
+      color:$title-color;
+      font-size: 30px;
+      font-weight: bold;
+    }
+  }
+  .button{
+    align-self: center;
+  }
 }
 
-.container--enjoy{
+.container--why-are{
   @include flex(column, stretch, center, nowrap);
   gap: 16px;
 }

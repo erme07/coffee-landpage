@@ -10,7 +10,6 @@
     margin: 0;
   }
   &__block{
-    flex-basis: 50%;
     gap: 30px;
     @include flex(column, start, flex-start, nowrap);
   }
@@ -20,7 +19,6 @@
     line-height: 1.7;
   }
   &__image{
-    flex-basis: 50%;
     width: 45%;
     height: auto;
   }

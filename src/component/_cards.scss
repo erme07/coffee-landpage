@@ -1,0 +1,64 @@
+.enjoy__cards, 
+.why-are__cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.why-are__cards{
+  .card{
+    padding: 35px;
+    transition: background-color .3s;
+    &__title{
+      font-size: 28px;
+    }
+    &__text{
+      font-size: 20px;
+    }
+    &:hover{
+      outline: none;
+      background-color: #FFEED8;
+    }
+  }
+  margin-bottom: 20px;
+}
+.enjoy__cards{
+  .card{
+    margin-bottom: 30px;
+  }
+}
+.card{
+  background-color: $card-background-color;
+  @include flex(column, center, flex-start, nowrap);
+  gap: 10px;
+  width: 100%;
+  outline: 1px solid rgba($accent-color, .42);
+  outline-offset: -1px;
+  color: $title-color;
+  transition: outline-color .3s;
+  &:hover{
+    outline-color: $accent-color;
+  }
+  &__image{
+    margin-bottom: 10px;
+    position: relative;
+  }
+  &__title{
+    font-size: 22px;
+    font-weight: bold;
+  }
+  &__text{
+    font-size: 16px;
+    color: $font-color-dark;
+    text-align: center;
+    text-wrap: pretty;
+  }
+  &__price{
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .button{
+    margin-bottom: -24px;
+    line-height: 1.2;
+    position: relative;
+  }
+}
