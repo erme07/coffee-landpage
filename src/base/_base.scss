@@ -1,0 +1,28 @@
+@import "../utilities/mixins";
+
+@include font-face('ClickerScript', '../../dist/assets/fonts/ClickerScript-Regular.woff2', 'normal');
+@include font-face('PlayFairDisplay', '../../dist/assets/fonts/PlayfairDisplay-Regular.woff2', 'normal');
+// @include font-face('PlayFairDisplay', '../../dist/assets/fonts/PlayfairDisplay-Bold.woff2', 'bold');
+// @include font-face('PlayFairDisplay', '../../dist/assets/fonts/PlayfairDisplay-Medium.woff2', 'medium');
+// @include font-face('PlayFairDisplay', '../../dist/assets/fonts/PlayfairDisplay-SemiBold.woff2', 'semibold');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+  color: unset;
+}
+ul, menu{
+  list-style: none;
+}
+body{
+  background-color: $ligh-background-color;
+}
+.container{
+  width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}

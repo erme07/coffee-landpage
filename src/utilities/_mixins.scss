@@ -1,0 +1,24 @@
+@mixin font-face($font-family, $font-path, $font-weight) {
+  @font-face {
+    font-family: $font-family;
+    src: url('#{$font-path}');
+    font-weight: $font-weight;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+@mixin flex ($f-direction:row ,$align-i:stretch ,$justify-c:flex-start, $f-wrap:nowrap){
+  display:flex;
+  @if $f-direction != row and $f-direction == column {
+    flex-direction: $f-direction;
+  }
+  @if $align-i != stretch {
+    align-items: $align-i;
+  }
+  @if $justify-c != flex-start {
+    justify-content: $justify-c;
+  }
+  @if $f-wrap != nowrap and $f-wrap == wrap {
+    flex-wrap: $f-wrap;
+  }
+}

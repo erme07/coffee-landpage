@@ -1,0 +1,43 @@
+@import "../abstract/variables";
+@import "../component/menu";
+
+.navbar{
+  $navbar-color:#1e1e1e;
+  height:$navbar-height;
+  position: sticky;
+  top: -100%;
+  z-index: 10;
+  background-color: rgba(#1e1e1e , .85);
+  color: white;
+  margin: 0;
+  transition: color .2s;
+  backdrop-filter: blur(13px);
+  &__brand{
+    font: {
+      family: 'ClickerScript';
+      size: 35px;
+      weight: lighter;
+    }
+    &:hover {color: $accent-color;}
+  }
+  &__users{
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    color: white;
+    font-size: 14px;
+    & :first-child{
+      text-decoration: underline;
+      transition: color .2s;
+    }
+    & :first-child:hover {color: $accent-color;}
+  }
+  
+}
+.container--navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 $container-padding;
+  height: 100%;
+}

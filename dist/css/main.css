@@ -1,0 +1,216 @@
+@font-face {
+  font-family: "ClickerScript";
+  src: url("../../dist/assets/fonts/ClickerScript-Regular.woff2");
+  font-weight: "normal";
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PlayFairDisplay";
+  src: url("../../dist/assets/fonts/PlayfairDisplay-Regular.woff2");
+  font-weight: "normal";
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+ul, menu {
+  list-style: none;
+}
+
+body {
+  background-color: #f8f8f8;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.button {
+  font-family: "PlayFairDisplay";
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #f9c06a;
+  display: block;
+  text-decoration: none;
+  color: #1e1e1e;
+  padding: 14px 26px;
+  border-radius: 24px;
+  box-shadow: 0 6px 12px 0 rgba(249, 192, 106, 0.22);
+  transition: background-color 0.3s;
+}
+.button--medium {
+  font-size: 16px;
+}
+.button:hover {
+  background-color: #fcb244;
+}
+
+menu {
+  display: flex;
+  gap: 60px;
+}
+menu a {
+  font-size: 14px;
+  transition: color 0.3s;
+}
+menu a:hover {
+  color: #f9c06a;
+}
+
+.navbar {
+  height: 80px;
+  position: sticky;
+  top: -100%;
+  z-index: 10;
+  background-color: rgba(30, 30, 30, 0.85);
+  color: white;
+  margin: 0;
+  transition: color 0.2s;
+  backdrop-filter: blur(13px);
+}
+.navbar__brand {
+  font-family: "ClickerScript";
+  font-size: 35px;
+  font-weight: lighter;
+}
+.navbar__brand:hover {
+  color: #f9c06a;
+}
+.navbar__users {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  color: white;
+  font-size: 14px;
+}
+.navbar__users :first-child {
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+.navbar__users :first-child:hover {
+  color: #f9c06a;
+}
+
+.container--navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  height: 100%;
+}
+
+.hero {
+  display: flex;
+  min-height: 100vh;
+  margin-top: -80px;
+  color: white;
+  background-image: linear-gradient(90deg, #1E1E1E 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(90deg, rgba(30, 30, 30, 0.3137254902) 0%, rgba(30, 30, 30, 0.3137254902) 100%), url("../assets/images/hero_image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+.hero__text {
+  font-family: "PlayFairDisplay";
+  width: 550px;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1.7;
+  margin-top: 0;
+}
+.hero__title {
+  font-family: "ClickerScript";
+  font-size: 180px;
+  font-weight: lighter;
+  line-height: 1;
+  margin: 0;
+}
+.hero__subtitle {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.container--hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 100px;
+  gap: 30px;
+}
+
+.discover {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+}
+.discover__title {
+  font-size: 54px;
+  font-weight: bold;
+  color: #603809;
+  margin: 0;
+}
+.discover__block {
+  flex-basis: 50%;
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.discover__text {
+  font-size: 20px;
+  color: #707070;
+  line-height: 1.7;
+}
+.discover__image {
+  flex-basis: 50%;
+  width: 45%;
+  height: auto;
+}
+.discover__back {
+  position: absolute;
+  bottom: -10%;
+  left: 0;
+}
+
+.container--discover {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.enjoy {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.enjoy__title {
+  font-size: 54px;
+  font-weight: bold;
+  color: #603809;
+  margin: 0;
+  text-align: center;
+}
+.enjoy__subtitle {
+  font-size: 20px;
+  color: #707070;
+  font-weight: 400;
+  text-align: center;
+}
+
+/*# sourceMappingURL=main.css.map */

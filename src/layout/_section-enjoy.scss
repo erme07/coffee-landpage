@@ -1,0 +1,18 @@
+
+.enjoy{
+  min-height: 100vh;
+  @include flex(column, center, center, nowrap);
+  &__title{
+    font-size: 54px;
+    font-weight: bold;
+    color: $title-color;
+    margin: 0;
+    text-align: center;
+  }
+  &__subtitle{
+    font-size: 20px;
+    color: $font-color;
+    font-weight: 400;
+    text-align: center;
+  }
+}

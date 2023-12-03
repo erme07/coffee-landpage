@@ -1,0 +1,12 @@
+menu{
+    display: flex;
+    gap: 60px;
+    a{
+      // color: white;
+      font-size: 14px;
+      transition: color .3s;
+    }
+    a:hover{
+    color: $accent-color;
+  }
+  }

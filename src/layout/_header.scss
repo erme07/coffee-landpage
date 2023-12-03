@@ -1,0 +1,44 @@
+
+.hero{
+  @include flex;
+  min-height: 100vh;
+  margin-top: -1 * $navbar-height;
+  color: white;
+  background: {
+    image: linear-gradient(90deg, #1E1E1E 0%, rgba(0, 0, 0, 0.00) 100%),
+            linear-gradient(90deg, #1e1e1e50 0%, #1E1E1E50 100%),
+            url("../assets/images/hero_image.jpg");
+    repeat: no-repeat;
+    size: cover;
+    position: top;
+  }
+  &__text{
+    font-family: 'PlayFairDisplay';
+    width: 550px;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-top: 0;
+  }
+  &__title{
+    font: {
+      family: 'ClickerScript';
+      size: 180px;
+      weight: lighter;
+    }
+    line-height: 1;
+    margin: 0;
+  }
+  &__subtitle{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+}
+.container--hero{
+    @include flex(column, flex-start, center, nowrap);
+    padding-top: $navbar-height + $container-padding;
+    // height: 100vh;
+    gap:30px;
+}

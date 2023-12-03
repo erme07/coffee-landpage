@@ -1,0 +1,37 @@
+
+.discover{
+  min-height: 100vh;
+  position: relative;
+  @include flex;
+  &__title{
+    font-size: 54px;
+    font-weight: bold;
+    color: $title-color;
+    margin: 0;
+  }
+  &__block{
+    flex-basis: 50%;
+    gap: 30px;
+    @include flex(column, start, flex-start, nowrap);
+  }
+  &__text{
+    font-size: 20px;
+    color: $font-color;
+    line-height: 1.7;
+  }
+  &__image{
+    flex-basis: 50%;
+    width: 45%;
+    height: auto;
+  }
+  &__back{
+    position: absolute;
+    bottom: -10%;
+    left: 0;
+  }
+}
+.container--discover{
+  @include flex;
+  gap: 50px;
+  align-items: center;
+}
