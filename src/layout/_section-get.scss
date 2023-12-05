@@ -1,0 +1,23 @@
+.get{
+  height: 550px;
+  background: linear-gradient(to right , rgba($coffee-color-dark, .88) , rgba($coffee-color-dark, .88)), url(../../dist/assets/images/banner-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  margin: 50px 0;
+  color:white;
+  .container{
+    height: 100%;
+    @include flex(column, center, center, nowrap);
+    gap: 20px;
+  }
+  &__title{
+    font-size: 54px;
+    font-weight: bold;
+  }
+  &__text{
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 40px;
+  }
+  
+}
