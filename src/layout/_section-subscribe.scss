@@ -1,0 +1,47 @@
+.subscribe{
+  margin: 80px 0;
+  .container{
+    @include flex(column, center, center, nowrap);
+    gap: 30px;
+  }
+  &__title{
+    font-size: 54px;
+    font-weight: bold;
+    color: $coffee-color;
+  }
+  &__subtitle{
+    font-size: 20px;
+    color: $font-color;
+  }
+  &__form{
+    height: 65px;
+    width: 600px;
+    @include flex(row, center, center, nowrap);
+    input{
+      height: 65px;
+      flex-grow: 1;
+      padding: 10px 20px;
+      font-size: 20px;
+      background-color: $card-background-color;
+      border-radius: 5px 0 0 5px;
+      border: 2px solid rgba($accent-color, .42);
+      &:focus{
+        outline: none;
+        border-color: $accent-color;
+      }
+    }
+    button{
+      height: 65px;
+      width: 135px;
+      padding: 10px;
+      font-family: 'PlayFairDisplay';
+      font-size: 22px;
+      font-weight: bold;
+      color: $coffee-color;
+      background-color: $accent-color;
+      border: none;
+      border-radius: 0 5px 5px 0;
+      cursor: pointer;
+    }
+  }
+}
