@@ -1,12 +1,21 @@
-menu{
-    display: flex;
-    gap: 60px;
+
+.menu{
+  display: flex;
+  gap: 60px;
+  
+  a{
+    // color: white;
+    font-size: 14px;
+    transition: color .3s;
+  }
+  a:hover{
+  color: $accent-color;
+  }
+  &--footer{
+    @include flex(column, flex-start, center, nowrap);
+    gap:15px;
     a{
-      // color: white;
-      font-size: 14px;
-      transition: color .3s;
+      font-size: 16px;
     }
-    a:hover{
-    color: $accent-color;
   }
-  }
+}

@@ -14,10 +14,6 @@
     &__text{
       font-size: 20px;
     }
-    &:hover{
-      outline: none;
-      background-color: #FFEED8;
-    }
   }
   margin-bottom: 20px;
 }
@@ -33,10 +29,10 @@
   width: 100%;
   outline: 1px solid rgba($accent-color, .42);
   outline-offset: -1px;
-  color: $title-color;
-  transition: outline-color .3s;
+  color: $coffee-color;
+  transition: background .3s;
   &:hover{
-    outline-color: $accent-color;
+    background-color: #FFEED8;
   }
   &__image{
     margin-bottom: 10px;

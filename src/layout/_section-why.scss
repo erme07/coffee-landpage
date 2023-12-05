@@ -1,10 +1,15 @@
 .why-are{
   min-height: 100vh;
+  position: relative;
   @include flex(column, center, center, nowrap);
+  .container{
+    @include flex(column, stretch, center, nowrap);
+    gap: 16px;
+  }
   &__title{
     font-size: 54px;
     font-weight: bold;
-    color: $title-color;
+    color: $coffee-color;
     margin: 0;
     text-align: center;
   }
@@ -22,17 +27,19 @@
     .enfasis{
       display: block;
       margin-top: 5px;
-      color:$title-color;
+      color:$coffee-color;
       font-size: 30px;
       font-weight: bold;
     }
+  }
+  &__back{
+    position: absolute;
+    transform: scaleX(-1);
+    right: 0;
+    top: -100px;
   }
   .button{
     align-self: center;
   }
 }
 
-.container--why-are{
-  @include flex(column, stretch, center, nowrap);
-  gap: 16px;
-}
