@@ -1,0 +1,112 @@
+$button-size: 80px;
+$image-size: 110px;
+
+.testimonial{
+  min-height: 100vh;
+  text-align: center;
+  position: relative;
+  .container{
+    @include flex(column, center, center, nowrap);
+    gap: 20px;
+  }
+  &__title{
+    font-size: 52px;
+    color: $coffee-color;
+    font-weight: bold;
+  }
+  &__subtitle{
+    font-size: 20px;
+    font-weight: 400;
+    color: $font-color;
+  }
+  &__slider{
+    width: 980px;
+    margin-top: 20px;
+    position: relative;
+  }
+  &__button{
+    font-family: 'PlayFairDisplay';
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 1;
+    color: $coffee-color;
+    width: $button-size;
+    height: $button-size;
+    border-radius: 16px;
+    border: none;
+    background-color: $accent-color;
+    transition: background-color .3s;
+    box-shadow: $box-shadow;
+    position: absolute;
+    top: calc(50% - $button-size/2);
+    z-index: 1;
+    cursor: pointer;
+    &--right {right: -$button-size/2;}
+    &--left {left: -$button-size/2;}
+    &:hover {background-color: $accent-color-hover;}
+  }
+  &__back{
+    position: absolute;
+    &:last-child{
+      right: 0;
+      top: 0;
+      transform: scaleX(-1);
+    }
+    &:not(:last-child){
+      left: 0;
+      bottom: -60px;
+      transform: scaleY(-1);
+    }
+  }
+}
+.slider-inner{
+  padding-bottom: $image-size/2;
+  overflow: hidden;
+  .slider-box{
+    background-color: $card-background-color;
+    outline: 1px solid rgba($accent-color, .42);
+    outline-offset: -1px;
+    @include flex(row, center, center, nowrap);
+  }
+}
+.slide{
+  padding: 130px 100px 0 100px;
+  padding-bottom: 0;
+  @include flex(column, center, center, nowrap);
+  gap: 10px;
+  flex-basis: 100%;
+  flex-shrink: 0;
+  &__quote{
+    font-size: 220px;
+    line-height: 1;
+    color: $coffee-color;
+    position: absolute;
+    left: 30px;
+    top: 0;
+  }
+  &__text{
+    font-size: 18px;
+    line-height: 2;
+    font-weight: 600;
+    color: $font-color;
+  }
+  &__title{
+    margin-top: 30px;
+    font-size: 32px;
+    font-weight: bold;
+    color: $coffee-color;
+  }
+  &__subtitle{
+    font-size: 20px;
+    font-weight: 400;
+    color: $font-color;
+    margin-bottom: 30px;
+  }
+  &__image{
+    width: $image-size;
+    height: auto;
+    border-radius: 16px;
+    margin-bottom: -$image-size/2;
+    position: relative;
+  }
+}
