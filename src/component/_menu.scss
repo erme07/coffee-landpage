@@ -2,7 +2,9 @@
 .menu{
   display: flex;
   gap: 60px;
-  
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
   a{
     // color: white;
     font-size: 14px;
@@ -10,6 +12,10 @@
   }
   a:hover{
   color: $accent-color;
+  }
+  @media (min-width: 992px) {
+    flex-direction: row;
+    gap: 60px;
   }
   &--footer{
     @include flex(column, flex-start, center, nowrap);

@@ -7,8 +7,20 @@
   padding: 50px 0;
   .container{
     display: grid;
-    grid-template-columns: minmax(300px, 2fr) 1fr 1fr minmax(300px, 2fr);
-    column-gap: 40px;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    .footer__block:first-child { grid-area: 1 / 1 / 2 / 3; }
+    .footer__block:last-child { grid-area: 3 / 1 / 4 / 3; }
+    @media (min-width: 768px) {
+      .footer__block:first-child { grid-area: 1 / 1 / 2 / 2; }
+      .footer__block:last-child { grid-area: 1 / 2 / 2 / 3; }
+    }
+    @media (min-width: 992px) {
+      grid-template-columns: minmax(300px, 2fr) 1fr 1fr minmax(300px, 2fr);
+      .footer__block:first-child { grid-area: 1 / 1 / 2 / 2; }
+      .footer__block:last-child { grid-area: 1 / 4 / 2 / 5; }
+    }
+    
   }
   &__block{
     @include flex(column, flex-start, flex-start, nowrap );

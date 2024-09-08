@@ -4,21 +4,29 @@
 .navbar{
   $navbar-color:#1e1e1e;
   height:$navbar-height;
-  position: sticky;
-  top: -100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
   z-index: 10;
   background-color: rgba(#1e1e1e , .85);
+  backdrop-filter: blur(16px);
   color: white;
   margin: 0;
-  transition: color .2s;
-  backdrop-filter: blur(13px);
+  transition: color .2s ease, top .5s ease, height .2s ease;
+  
   &__brand{
     font: {
       family: 'ClickerScript';
       size: 35px;
       weight: lighter;
     }
-    &:hover {color: $accent-color;}
+    & a:hover {color: $accent-color;}
+    @media (min-width: 992px) {
+      flex-basis: 27%;
+    }
+    @media (min-width: 1200px) {
+      flex-basis: 33.33%;
+    }
   }
   &__users{
     display: flex;
@@ -32,12 +40,67 @@
     }
     & :first-child:hover {color: $accent-color;}
   }
+  &__button{
+    height: 50px;
+    width: 50px;
+    background-color: #f9c06a;
+    border-radius: 10px;
+    color:#603809;
+    svg{
+      pointer-events: none;
+      height: 50px;
+      position: absolute;
+      width: 50px;
+    }
+    @media (min-width: 992px) {
+      display:none;
+    }
+  }
   
 }
+.navbar.menuShow{
+  height: 100vh;
+  position: fixed;
+  top: 0;
+}
+
 .container--navbar{
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  padding: 0 $container-padding;
-  height: 100%;
+  @media (min-width: 992px) {
+    align-items: center;
+  }
+}
+.navbar__overlay{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  justify-content: space-evenly;
+  position: absolute;
+  inset: 0;
+  top: 80px;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  
+  
+  @media (min-width: 992px) {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 73%;
+    opacity: 1;
+    height: auto;
+    position: static;
+    justify-content: space-between;
+  }
+  @media (min-width: 1200px) {
+    flex-basis: 66.66%;
+  }
+}
+.menuShow .navbar__overlay{
+  opacity: 1;
+  height: calc(100vh - 80px);
+  transition: height .5s, opacity .3s ease-in-out .2s ;
 }

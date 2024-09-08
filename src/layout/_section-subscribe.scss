@@ -5,23 +5,32 @@
     gap: 30px;
   }
   &__title{
-    font-size: 54px;
+    
+    font-size: clamp(1.875rem, 0rem + 9.375vw, 3.375rem);
     font-weight: bold;
     color: $coffee-color;
+    text-align: center;
+    @media (min-width: 768px) {
+      font-size: 54px;
+    }
   }
   &__subtitle{
-    font-size: 20px;
+    font-size: clamp(1.063rem, 0.5469rem + 1.9531vw, 1.25rem);
     color: $font-color;
+    @media (min-width: 768px) {
+      font-size: 20px;
+    }
   }
   &__form{
     height: 65px;
-    width: 600px;
+    width: 100%;
     @include flex(row, center, center, nowrap);
     input{
       height: 65px;
       flex-grow: 1;
-      padding: 10px 20px;
-      font-size: 20px;
+      padding: 10px 5px 10px 15px;
+      //font-size: 12px;
+      font-size: clamp(0.938rem, 0.125rem + 3.125vw, 1.25rem);
       background-color: $card-background-color;
       border-radius: 5px 0 0 5px;
       border: 2px solid rgba($accent-color, .42);
@@ -29,19 +38,30 @@
         outline: none;
         border-color: $accent-color;
       }
+      @media (min-width: 768px) {
+        font-size: 20px;
+        padding: 10px 20px;
+      }
     }
     button{
       height: 65px;
-      width: 135px;
       padding: 10px;
       font-family: 'PlayFairDisplay';
-      font-size: 22px;
+      //font-size: 15px;
+      font-size: clamp(0.938rem, 0.125rem + 3.125vw, 1.25rem);
       font-weight: bold;
       color: $coffee-color;
       background-color: $accent-color;
       border: none;
       border-radius: 0 5px 5px 0;
       cursor: pointer;
+      @media (min-width: 768px) {
+        font-size: 22px;
+        width: 135px;
+      }
+    }
+    @media (min-width: 768px) {
+      max-width: 600px;
     }
   }
 }

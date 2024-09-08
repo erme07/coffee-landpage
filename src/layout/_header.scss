@@ -2,7 +2,6 @@
 .hero{
   @include flex;
   min-height: 100vh;
-  margin-top: -1 * $navbar-height;
   color: white;
   background: {
     image: linear-gradient(90deg, #1E1E1E 0%, #00000000 100%),
@@ -14,31 +13,43 @@
   }
   &__text{
     font-family: 'PlayFairDisplay';
-    width: 550px;
+    
     font-weight: 100;
     font-style: normal;
-    font-size: 18px;
+    font-size: clamp(1rem, 0.8438rem + 0.7813vw, 1.125rem);
     line-height: 1.7;
     margin-top: 0;
+    text-align: center;
+    @media (min-width: 576px) {
+      text-align: left;
+    }
+    @media (min-width: 768px) {
+      width: 550px;
+    }
   }
   &__title{
     font: {
       family: 'ClickerScript';
-      size: 180px;
+      size: clamp(6.875rem, 3.75rem + 15.625vw, 9.375rem);
       weight: lighter;
     }
     line-height: 1;
     margin: 0;
+    @media (min-width: 768px) {
+      font-size: 180px;
+    }
   }
   &__subtitle{
-    font-size: 20px;
+    font-size: clamp(1rem, 0.6875rem + 1.5625vw, 1.25rem);
     font-weight: 500;
     margin-bottom: 10px;
   }
 }
 .container--hero{
-    @include flex(column, flex-start, center, nowrap);
+    @include flex(column, center, center, nowrap);
     padding-top: $navbar-height + $container-padding;
-    // height: 100vh;
     gap:30px;
+    @media (min-width: 576px) {
+      align-items: flex-start;
+    }
 }

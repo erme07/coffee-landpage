@@ -1,7 +1,7 @@
 .enjoy__cards, 
 .why-are__cards{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   gap: 20px;
 }
 .why-are__cards{
@@ -22,6 +22,7 @@
     margin-bottom: 30px;
   }
 }
+
 .card{
   background-color: $card-background-color;
   @include flex(column, center, flex-start, nowrap);
@@ -37,6 +38,8 @@
   &__image{
     margin-bottom: 10px;
     position: relative;
+    width: 100%;
+    height: auto;
   }
   &__title{
     font-size: 22px;
