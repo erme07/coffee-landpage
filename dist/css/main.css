@@ -1,13 +1,13 @@
 @font-face {
   font-family: "ClickerScript";
-  src: url("../../dist/assets/fonts/ClickerScript-Regular.woff2");
+  src: url("../assets/fonts/ClickerScript-Regular.woff2");
   font-weight: "normal";
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "PlayFairDisplay";
-  src: url("../../dist/assets/fonts/PlayfairDisplay-Regular.woff2");
+  src: url("../assets/fonts/PlayfairDisplay-Regular.woff2");
   font-weight: "normal";
   font-style: normal;
   font-display: swap;
@@ -577,7 +577,7 @@ body {
 
 .get {
   height: 550px;
-  background: linear-gradient(to right, rgba(68, 40, 8, 0.88), rgba(68, 40, 8, 0.88)), url(../../dist/assets/images/banner-bg.jpg);
+  background: linear-gradient(to right, rgba(68, 40, 8, 0.88), rgba(68, 40, 8, 0.88)), url(../assets/images/banner-bg.jpg);
   background-size: cover;
   background-position: center;
   margin: 50px 0;
@@ -920,7 +920,7 @@ body {
 }
 
 .footer {
-  background: linear-gradient(to right, rgba(68, 40, 8, 0.88), rgba(68, 40, 8, 0.88)), url(../../dist/assets/images/footer.jpg);
+  background: linear-gradient(to right, rgba(68, 40, 8, 0.88), rgba(68, 40, 8, 0.88)), url(../assets/images/footer.jpg);
   color: white;
   padding: 50px 0;
 }
