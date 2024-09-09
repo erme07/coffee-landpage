@@ -4,8 +4,12 @@ In this project I use sass to build this landing page inspired by a design taken
 
 [Live preview](https://coffee-landpage.pages.dev/)
 
+![screenshot](screenshot.jpg)
+
 ## Features
 - Responsive
+- Touch swipe carousel
+- Sticky navigation bar
 
 ## Original Design
 [layout](https://github.com/erme07/coffee-landpage/blob/bf7b1bee37e61649606cf5ea91f0badc07a2614c/original_design.png)
