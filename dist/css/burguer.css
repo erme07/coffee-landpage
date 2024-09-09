@@ -1,0 +1,50 @@
+
+.close {
+  transform: scale(0);
+  transition: transform 400ms;
+}
+.line {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 6px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transform-origin: 50%;
+  transition: stroke-dasharray 500ms 200ms, stroke-dashoffset 500ms 200ms, transform 500ms 200ms;
+}
+.close .line {
+  stroke-width: 5.5px;
+}
+
+.navbar__button .close {
+  transition: transform 400ms;
+}
+.navbar__button .line {
+  transform-origin: 50%;
+  transition: transform 400ms 100ms;
+}
+.active.navbar__button .line {
+  transition: transform 400ms;
+}
+.active.navbar__button .line--one {
+  transform: translateX(18px) translateY(-3px) rotate(-45deg) scale(.7);
+}
+.active.navbar__button .line--two {
+  transform: translateX(-18px) translateY(-3px) rotate(45deg) scale(.7);
+}
+.active.navbar__button .line--three {
+  transform: translateY(0px) rotate(45deg) scale(.7);
+}
+.active.navbar__button .line--four {
+  transform: translateY(0px) rotate(-45deg) scale(.7);
+}
+.active.navbar__button .line--five {
+  transform: translateX(18px) translateY(3px) rotate(45deg) scale(.7);
+}
+.active.navbar__button .line--six {
+  transform: translateX(-18px) translateY(3px) rotate(-45deg) scale(.7);
+}
+.active.navbar__button .close {
+  transition: transform 400ms 100ms;
+  transform: scale(1);
+}
