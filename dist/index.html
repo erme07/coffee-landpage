@@ -3,21 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="./assets/favicon/site.webmanifest">
+  <link rel="stylesheet" href="./css/burguer.css">
   <link rel="stylesheet" href="./css/main.css">
   <script src="./js/script.js" defer></script>
   <title>Bean Scene | The taste of live</title>
   <nav class="navbar">
     <div class="container container--navbar">
       <h2 class="navbar__brand"><a href="">Bean Scene</a></h2>
-      <menu class="menu menu--navbar">
-        <li><a href="">Home</a></li>
-        <li><a href="">Menu</a></li>
-        <li><a href="">About Us</a></li>
-        <li><a href="">Contact Us</a></li>
-      </menu>
-      <div class="navbar__users">
-        <a href="">Sign In</a>
-        <a href="" class="button">Sign Up</a>
+      <div class="navbar__overlay">
+        
+        <menu class="menu menu--navbar">
+          <li><a href="">Home</a></li>
+          <li><a href="">Menu</a></li>
+          <li><a href="">About Us</a></li>
+          <li><a href="">Contact Us</a></li>
+        </menu>
+        <div class="navbar__users">
+          <a href="">Sign In</a>
+          <a href="" class="button">Sign Up</a>
+        </div>
+      </div>
+      <div class="navbar__button" id="navButton">
+        <svg class="burger" viewBox="0 0 100 100">
+          <path class="line line--one" d="M 50,35 H 30" />
+          <path class="line line--two" d="M 50,35 H 70" />
+          <path class="line line--three" d="M 50,50 H 30" />
+          <path class="line line--four" d="M 50,50 H 70" />
+          <path class="line line--five" d="M 50,65 H 30" />
+          <path class="line line--six" d="M 50,65 H 70" />
+        </svg>
+        <svg class="close" viewBox="0 0 100 100">
+          <path class="line" d="M 34,32 L 66,68" />
+          <path class="line" d="M 66,32 L 34,68" />
+        </svg>
       </div>
     </div>
   </nav>
